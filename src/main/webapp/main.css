@@ -1,0 +1,20 @@
+.sort-by select {
+  width: 73%;
+  height: 35px;
+  border:1px solid #fff;
+  outline:none;
+}
+.sort-by label{
+margin-right:10px;
+  font-size: 1.2em;
+}
+.search input[type="submit"] {
+  font-size: 1em;
+  padding: 0.5em 2em;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background-color: rgb(8, 83, 140);
+  color: #fff;
+
+}

@@ -1,0 +1,13 @@
+esta\hibernate\example\BaseEntity.class
+esta\fixs\database\HibernateHelper.class
+esta\hibernate\example\Acquire.class
+esta\hibernate\example\Gender.class
+esta\hibernate\example\Landlord.class
+esta\hibernate\example\Tenant.class
+esta\hibernate\example\UserCredential.class
+esta\authentication\LogoutAction.class
+esta\authentication\LoginAction.class
+esta\fixs\database\servlet.class
+esta\hibernate\example\HibernateHelper.class
+esta\hibernate\example\Person.class
+esta\hibernate\example\Contact.class
