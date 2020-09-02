@@ -19,16 +19,9 @@ public class Tenant extends BaseEntity{
     private Contact contact;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name="landlord_id", referencedColumnName = "id")
+    @JoinColumn(name="landlord_id")
     private Landlord landlord;
 
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
 
     public Person getPerson() {
         return person;
@@ -46,11 +39,11 @@ public class Tenant extends BaseEntity{
         this.contact = contact;
     }
 
-//    public Landlord getLandlord() {
-//        return landlord;
-//    }
-//
-//    public void setLandlord(Landlord landlord) {
-//        this.landlord = landlord;
-//    }
+    public Landlord getLandlord() {
+        return landlord;
+    }
+
+    public void setLandlord(Landlord landlord) {
+        this.landlord = landlord;
+    }
 }

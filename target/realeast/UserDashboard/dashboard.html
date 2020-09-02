@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+@WebServlet(urlPatterns = {"/dashboard"})
 <html lang="en">
 <head>
     <title>RealEstate</title>
@@ -8,15 +9,79 @@
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="dashboard.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
 <div class="grid-container">
-    <header class="header"></header>
-    <aside class="sidenav"></aside>
-    <main class="main"></main>
-    <footer class="footer"></footer>
+    <header class="header"><div class="header__search">Welcome...</div>
+        <div class="header__avatar">UserName</div></header>
+    <aside class="sidenav">
+        <ul class="sidenav__list">
+            <button style="font-size:24px">DashBoard<i class="fa fa-dashboard"></i></button>
+
+            <li class="sidenav__list-item">Profile</li>
+            <li class="sidenav__list-item">Payment Records</li>
+            <li class="sidenav__list-item">House Details</li>
+            <li class="sidenav__list-item">Item Four</li>
+            <li class="sidenav__list-item">Logout</li>
+        </ul>
+    </aside>
+    <main class="main">
+        <div class="main-header">
+            <div class="main-header__heading">Hello Username</div>
+            <div class="main-header__updates">Recent Properties</div>
+        </div>
+        <div class="main-overview">
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Flat</div>
+                <div class="overviewcard__info">001</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">House No</div>
+                <div class="overviewcard__info">50</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Region</div>
+                <div class="overviewcard__info">Lucky</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Rate</div>
+                <div class="overviewcard__info">50%</div>
+            </div>
+        </div>
+        <div class="main-cards">
+            <div class="card">Message</div>
+
+
+        </div>
+    </main>
+    <footer class="footer"><div class="footer__copyright">&copy; RealEast</div>
+<div class="footer__signature">Find your Dream Home</div></footer>
 </div>
+<script>
+    const menuIconEl = $('.menu-icon');
+    const sidenavEl = $('.sidenav');
+    const sidenavCloseEl = $('.sidenav__close-icon');
+
+    // Add and remove provided class names
+    function toggleClassName(el, className) {
+      if (el.hasClass(className)) {
+        el.removeClass(className);
+      } else {
+        el.addClass(className);
+      }
+    }
+    // Open the side nav on click
+    menuIconEl.on('click', function() {
+      toggleClassName(sidenavEl, 'active');
+    });
+
+    // Close the side nav on click
+    sidenavCloseEl.on('click', function() {
+      toggleClassName(sidenavEl, 'active');
+    });
+  </script>
 
 

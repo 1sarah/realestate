@@ -1,6 +1,5 @@
 package esta.fixs.database;
-import esta.hibernate.example.Landlord;
-import esta.hibernate.example.Tenant;
+import esta.hibernate.example.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -36,6 +35,12 @@ public class HibernateHelper {
 
         configuration.addAnnotatedClass(Landlord.class);
         configuration.addAnnotatedClass(Tenant.class);
+        configuration.addAnnotatedClass(House.class);
+        configuration.addAnnotatedClass(Plot.class);
+        configuration.addAnnotatedClass(Acquire.class);
+        configuration.addAnnotatedClass(Payment.class);
+
+
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties()).build();

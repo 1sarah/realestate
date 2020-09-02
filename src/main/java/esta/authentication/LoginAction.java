@@ -26,7 +26,7 @@ public class LoginAction extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String userName = request.getParameter("email");
         String userPassword = request.getParameter("password");
-        String sql = "SELECT * FROM shule_yetus WHERE EMAIL = ?";
+        String sql = "SELECT * FROM realestate WHERE EMAIL = ?";
         PreparedStatement statement = null;
         ResultSet resultSet;
         try{

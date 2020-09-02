@@ -21,17 +21,29 @@ public class Landlord extends BaseEntity{
     @OneToMany(mappedBy = "landlord",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Tenant> tenants = new ArrayList<Tenant>();
 
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+//    @OneToMany(mappedBy = "landlords",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    private List<Plot> plots = new ArrayList<Plot>();
+
 
     public Person getPerson() {
         return person;
     }
+
+    public List<Tenant> getTenants() {
+        return tenants;
+    }
+
+    public void setTenants(List<Tenant> tenants) {
+        this.tenants = tenants;
+    }
+
+//    public List<Plot> getPlots() {
+//        return plots;
+//    }
+//
+//    public void setPlots(List<Plot> plots) {
+//        this.plots = plots;
+//    }
 
     public void setPerson(Person person) {
         this.person = person;
@@ -45,11 +57,5 @@ public class Landlord extends BaseEntity{
         this.contact = contact;
     }
 
-//    public List<Tenant> getTenants() {
-//        return tenants;
-//    }
-//
-//    public void setTenants(List<Tenant> tenants) {
-//        this.tenants = tenants;
-//    }
+
 }
